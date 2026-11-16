@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skinova | Admin Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #eee3d6;
+            color: #493326;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: #795438;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            font-size: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 45px 7%;
+        }
+
+        h1 {
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: #927966;
+            margin-bottom: 30px;
+        }
+
+        .request-card {
+            background: #fffaf5;
+            padding: 28px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .request-card h2 {
+            margin-bottom: 18px;
+            color: #795438;
+        }
+
+        .request-card p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        .status {
+            color: #927966;
+            font-weight: bold;
+        }
+
+        .guidance-section {
+            border-top: 1px solid #e2d3c5;
+            margin-top: 25px;
+            padding-top: 22px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 130px;
+            padding: 14px;
+            margin-top: 12px;
+            border: 1px solid #cbb8a6;
+            border-radius: 8px;
+            background: white;
+            font-family: Georgia, serif;
+            font-size: 15px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #795438;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #493326;
+        }
+
+        .empty-message {
+            background: #fffaf5;
+            padding: 30px;
+            border-radius: 12px;
+            color: #927966;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Skinova Admin</h2>
+        <a href="/admin-logout">Logout</a>
+    </nav>
+
+    <div class="container">
+
+        <h1>Welcome, Admin!</h1>
+
+        <p class="subtitle">
+            Review user skin requests and provide personalized guidance.
+        </p>
+
+        <h2 style="margin-bottom: 20px;">User Skin Requests</h2>
+
+        {% if requests %}
+
+            {% for item in requests %}
+
+                <div class="request-card">
+
+                    <h2>Request #{{ item[0] }}</h2>
+
+                    <p><strong>User Name:</strong> {{ item[1] }}</p>
+
+                    <p><strong>Email:</strong> {{ item[2] }}</p>
+
+                    <p><strong>Age:</strong> {{ item[3] or 'Not provided' }}</p>
+
+                    <p><strong>Skin Type:</strong> {{ item[4] or 'Not provided' }}</p>
+
+                    <p><strong>Skin Concern:</strong> {{ item[5] or 'Not provided' }}</p>
+
+                    <p><strong>Question:</strong> {{ item[6] }}</p>
+
+                    <p><strong>Current Routine:</strong> {{ item[7] }}</p>
+
+                    <p class="status">
+                        Status: {{ item[8] }}
+                    </p>
+
+                    <p><strong>Submitted At:</strong> {{ item[9] }}</p>
+
+                    <div class="guidance-section">
+
+                        {% if item[8] == 'Pending' %}
+
+                            <h3>Provide Skincare Guidance</h3>
+
+                            <form action="/give-guidance" method="POST">
+
+                                <input
+                                    type="hidden"
+                                    name="request_id"
+                                    value="{{ item[0] }}"
+                                >
+
+                                <textarea
+                                    name="guidance"
+                                    placeholder="Write personalized skincare guidance here..."
+                                    required
+                                ></textarea>
+
+                                <button type="submit">
+                                    Submit Guidance
+                                </button>
+
+                            </form>
+
+                        {% else %}
+
+                            <h3>Guidance Already Submitted</h3>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <div class="empty-message">
+                <h3>No Skin Requests Yet!</h3>
+                <p>User requests will appear here.</p>
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

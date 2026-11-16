@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skinova | Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #e9dfd2;
+            color: #493326;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 8%;
+            background: #e9dfd2;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #563a29;
+        }
+
+        .nav-right a {
+            text-decoration: none;
+            color: #624832;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .welcome {
+            padding: 65px 9% 55px;
+            background: linear-gradient(120deg, #e9dfd2, #dfcbb6);
+        }
+
+        .small-title {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #927052;
+            margin-bottom: 22px;
+        }
+
+        .welcome h1 {
+            font-size: 52px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .welcome h2 {
+            font-size: 25px;
+            font-weight: normal;
+            color: #805c40;
+            margin-bottom: 17px;
+        }
+
+        .welcome p {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #765c49;
+            max-width: 600px;
+        }
+
+        .discover {
+            margin: 35px 8%;
+            padding: 45px 50px;
+            background: #60432f;
+            color: #f5e9dc;
+            border-radius: 12px;
+        }
+
+        .discover .small-title {
+            color: #d8b99b;
+        }
+
+        .discover h2 {
+            font-size: 35px;
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+
+        .discover p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #e4d1bf;
+            max-width: 620px;
+            margin-bottom: 25px;
+        }
+
+        .discover-btn {
+            display: inline-block;
+            background: #eee0d0;
+            color: #503321;
+            padding: 14px 27px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .discover-btn:hover {
+            background: #d9c0a7;
+        }
+
+        .features {
+            padding: 45px 8% 75px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #80664f;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .card {
+            background: #f1e7dc;
+            border: 1px solid #d2bda7;
+            padding: 30px;
+            border-radius: 9px;
+            text-decoration: none;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px #9d806544;
+        }
+
+        .card-number {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #a17b5c;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 23px;
+            font-weight: normal;
+            color: #543725;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #765c49;
+        }
+
+        .card span {
+            display: inline-block;
+            margin-top: 18px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #79563e;
+        }
+
+        .reminder {
+            background: #d7c2ac;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .reminder .small-title {
+            color: #89694e;
+        }
+
+        .reminder h2 {
+            font-size: 34px;
+            font-weight: normal;
+            color: #503725;
+            margin-bottom: 18px;
+        }
+
+        .reminder p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #765c49;
+        }
+
+        .heart {
+            font-size: 25px;
+            margin-top: 18px;
+        }
+
+        footer {
+            background: #493326;
+            color: #dfcbb8;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        footer small {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #c9ad94;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 20px 5%;
+            }
+
+            .welcome {
+                padding: 50px 7%;
+            }
+
+            .welcome h1 {
+                font-size: 39px;
+            }
+
+            .welcome h2 {
+                font-size: 21px;
+            }
+
+            .discover {
+                margin: 25px 5%;
+                padding: 30px 25px;
+            }
+
+            .discover h2 {
+                font-size: 29px;
+            }
+
+            .features {
+                padding: 40px 6%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .reminder h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">skinova.</div>
+
+        <div class="nav-right">
+            <a href="/dashboard">DASHBOARD</a>
+            <a href="/logout" style="margin-left: 25px;">LOGOUT</a>
+        </div>
+    </nav>
+
+    <section class="welcome">
+
+        <p class="small-title">
+            YOUR PERSONAL SKINCARE SPACE
+        </p>
+
+        <h1>Welcome, gorgeous.</h1>
+
+        <h2>Your skin deserves care that feels like you.</h2>
+
+        <p>
+            Discover your skin, understand its needs,
+            and find a skincare routine that suits you.
+        </p>
+
+    </section>
+
+    <section class="discover">
+
+        <p class="small-title">
+            LET'S BEGIN YOUR JOURNEY
+        </p>
+
+        <h2>Get to know your skin.</h2>
+
+        <p>
+            Tell us about your skin type, concerns and
+            current routine to get personalized skincare guidance.
+        </p>
+
+        <a href="/skin-request" class="discover-btn">
+            Discover My Skin →
+        </a>
+
+    </section>
+
+    <section class="features">
+
+        <p class="small-title">
+            EXPLORE YOUR SKINOVA
+        </p>
+
+        <h2 class="section-title">
+            Your skincare, all in one place.
+        </h2>
+
+        <p class="section-description">
+            Everything you need for a more personal skincare journey.
+        </p>
+
+        <div class="cards">
+
+            <a href="/my-guidance" class="card">
+
+                <p class="card-number">01 — PERSONAL CARE</p>
+
+                <h3>My Guidance</h3>
+
+                <p>
+                    Explore personalized skincare guidance
+                    based on your skin needs.
+                </p>
+
+                <span>Explore Guidance →</span>
+
+            </a>
+
+            <a href="/skincare-library" class="card">
+
+                <p class="card-number">02 — KNOWLEDGE</p>
+
+                <h3>Skincare Library</h3>
+
+                <p>
+                    Learn about skincare ingredients,
+                    different skin types and useful skincare tips.
+                </p>
+
+                <span>Explore Library →</span>
+
+            </a>
+
+            <a href="/product-suggestions" class="card">
+
+                <p class="card-number">03 — PRODUCT DISCOVERY</p>
+
+                <h3>Product Suggestions</h3>
+
+                <p>
+                    Discover skincare product suggestions
+                    according to your skin type and concerns.
+                </p>
+
+                <span>Explore Suggestions →</span>
+
+            </a>
+
+            <a href="/my-requests" class="card">
+
+                <p class="card-number">04 — YOUR ACTIVITY</p>
+
+                <h3>My Requests</h3>
+
+                <p>
+                    View your submitted skincare questions
+                    and track their status.
+                </p>
+
+                <span>View My Requests →</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="reminder">
+
+        <p class="small-title">A GENTLE REMINDER</p>
+
+        <h2>Healthy skin is a journey, not a race.</h2>
+
+        <p>
+            Be patient with your skin.
+            Give it the care and attention it deserves.
+        </p>
+
+        <div class="heart">🤎</div>
+
+    </section>
+
+    <footer>
+
+        <p>A little care, every day.</p>
+
+        <small>
+            © 2026 Skinova. All rights reserved.
+        </small>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1088 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skinova | Skincare Library</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #f5f0e8;
+            color: #49382d;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #e8ded0;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #49382d;
+            font-size: 14px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px 45px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: auto;
+            color: #76675b;
+        }
+
+        .container {
+            width: 86%;
+            max-width: 1200px;
+            margin: auto;
+            padding-bottom: 60px;
+        }
+
+        .section {
+            margin-top: 55px;
+        }
+
+        .section-title {
+            font-size: 27px;
+            border-bottom: 1px solid #c9b8a5;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+        }
+
+        .section-intro {
+            color: #76675b;
+            margin-bottom: 22px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fffdf9;
+            padding: 23px;
+            border-radius: 12px;
+            border: 1px solid #e5d9cb;
+        }
+
+        .card h3 {
+            font-size: 19px;
+            margin-bottom: 9px;
+            color: #604735;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #75665b;
+        }
+
+        .note {
+            background: #e9dfd2;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        .note h3 {
+            margin-bottom: 8px;
+        }
+
+        .note p {
+            font-size: 14px;
+        }
+
+        .subheading {
+            font-size: 21px;
+            margin: 30px 0 17px;
+            color: #604735;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #e8ded0;
+            color: #76675b;
+            font-size: 14px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 35px;
+            text-decoration: none;
+            color: #604735;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            header {
+                padding: 18px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">skinova.</div>
+    <a href="/dashboard">DASHBOARD</a>
+</header>
+
+<div class="hero">
+    <h1>Your Skincare Library.</h1>
+    <p>
+        Learn about your skin, understand common concerns,
+        explore skincare ingredients and build healthier daily habits.
+    </p>
+</div>
+
+<div class="container">
+
+    <!-- SECTION 01 -->
+    <section class="section">
+        <h2 class="section-title">01 — Understanding Skin Types</h2>
+        <p class="section-intro">
+            Skin types are mainly related to how much oil your skin naturally produces.
+            Your skin can also change with weather, age, hormones and other factors.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Oily Skin</h3>
+                <p>
+                    Produces more sebum than needed. The skin may look shiny,
+                    especially around the forehead, nose and chin.
+                    Oily skin can also experience clogged pores and acne.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Dry Skin</h3>
+                <p>
+                    Produces less natural oil. It may feel rough, tight or flaky
+                    and can sometimes appear dull. A suitable moisturizer helps
+                    support the skin barrier.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Combination Skin</h3>
+                <p>
+                    Has different characteristics in different areas.
+                    The forehead, nose and chin may be oily, while the cheeks
+                    may feel normal or dry.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Normal Skin</h3>
+                <p>
+                    Usually has a relatively balanced level of oil and moisture.
+                    It may not feel excessively oily or dry, although occasional
+                    concerns can still happen.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Sensitive Skin</h3>
+                <p>
+                    May react easily to skincare products or environmental factors.
+                    Possible reactions include redness, itching, burning or irritation.
+                    Sensitivity can occur with any skin type.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Dehydrated Skin</h3>
+                <p>
+                    A condition in which the skin lacks water.
+                    It may feel tight or look less fresh, even if it produces
+                    plenty of oil. It can affect every skin type.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Mature Skin</h3>
+                <p>
+                    Skin naturally changes over time. It may become drier,
+                    less elastic or show more fine lines due to natural ageing
+                    and environmental exposure.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Acne-Prone Skin</h3>
+                <p>
+                    This is a skin characteristic rather than a separate basic
+                    skin type. It describes skin that frequently develops
+                    pimples, blackheads or whiteheads.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Skin Barrier-Impaired Skin</h3>
+                <p>
+                    When the protective skin barrier is not working properly,
+                    skin may become dry, tight, irritated or more sensitive
+                    to products and environmental factors.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="note">
+            <h3>Remember</h3>
+            <p>
+                Skin type and skin condition are not the same.
+                For example, someone can have oily, sensitive and dehydrated
+                skin at the same time. Skin needs can also change over time.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- SECTION 02 -->
+    <section class="section">
+        <h2 class="section-title">02 — Common Skin Concerns</h2>
+        <p class="section-intro">
+            Skin concerns can have different causes. Understanding them
+            can help you make informed skincare decisions.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Acne & Pimples</h3>
+                <p>
+                    Acne develops when hair follicles become clogged with
+                    oil and dead skin cells. Hormones, inflammation and other
+                    factors can also contribute.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Blackheads</h3>
+                <p>
+                    Blackheads are open clogged pores. Their dark appearance
+                    is caused by the contents of the pore reacting with air,
+                    not simply by dirt.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Whiteheads</h3>
+                <p>
+                    Whiteheads are closed clogged pores. They appear as
+                    small, pale or skin-coloured bumps.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Dark Spots & Acne Marks</h3>
+                <p>
+                    These are areas of increased pigmentation that may remain
+                    after acne, irritation or inflammation. Sun exposure can
+                    make some dark spots more noticeable.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Melasma</h3>
+                <p>
+                    Melasma causes patches of brown or grey-brown pigmentation,
+                    commonly on the face. Sun exposure and hormonal factors
+                    can contribute to it.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Uneven Skin Tone</h3>
+                <p>
+                    Some areas of the skin may appear darker or lighter than
+                    surrounding areas. Sun exposure, inflammation and
+                    pigmentation changes can be contributing factors.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Excess Oiliness</h3>
+                <p>
+                    Excess sebum can make the skin look shiny.
+                    It may also contribute to clogged pores in some people.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Dryness & Flakiness</h3>
+                <p>
+                    Skin may feel rough, tight or flaky when it lacks
+                    sufficient moisture or natural oils.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Dehydration</h3>
+                <p>
+                    Dehydrated skin lacks water. It may feel tight,
+                    uncomfortable or look less fresh, regardless of
+                    whether the skin is oily or dry.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Redness & Irritation</h3>
+                <p>
+                    Redness, itching or burning may happen due to product
+                    reactions, environmental triggers or certain skin
+                    conditions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Rough Skin Texture</h3>
+                <p>
+                    Skin may feel uneven or rough due to dryness,
+                    clogged pores or other skin conditions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Sun Damage</h3>
+                <p>
+                    Repeated exposure to ultraviolet radiation can contribute
+                    to pigmentation, premature skin ageing and other
+                    long-term skin changes.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Under-Eye Darkness</h3>
+                <p>
+                    Dark circles can be related to genetics, pigmentation,
+                    visible blood vessels, ageing or shadows caused by
+                    facial structure.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Fine Lines</h3>
+                <p>
+                    Fine lines are small skin creases that can become more
+                    noticeable with natural ageing, sun exposure and
+                    repeated facial movements.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Enlarged-Looking Pores</h3>
+                <p>
+                    Pores may appear more visible due to genetics,
+                    excess oil, clogged pores and changes in skin elasticity.
+                    Their appearance is normal.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Skin Itching</h3>
+                <p>
+                    Itching can occur due to dryness, irritation, allergies
+                    or skin conditions. Persistent itching should be
+                    assessed by a qualified healthcare professional.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 03 -->
+    <section class="section">
+        <h2 class="section-title">03 — Skincare Ingredients Guide</h2>
+        <p class="section-intro">
+            Skincare ingredients have different functions.
+            Some support hydration, some help with clogged pores,
+            and others support the skin barrier or protect against sun damage.
+        </p>
+
+        <h3 class="subheading">Hydrating & Moisturizing Ingredients</h3>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Hyaluronic Acid</h3>
+                <p>
+                    A humectant that attracts and holds water in the skin.
+                    It is commonly used in hydrating serums and moisturizers.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Glycerin</h3>
+                <p>
+                    A well-known humectant that attracts water and helps
+                    maintain skin hydration. It is found in many cleansers
+                    and moisturizers.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Panthenol (Vitamin B5)</h3>
+                <p>
+                    A moisturizing ingredient that helps soothe the skin
+                    and support the skin barrier.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Squalane</h3>
+                <p>
+                    An emollient that helps soften the skin and reduce
+                    moisture loss. It is used in many moisturizing products.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Urea</h3>
+                <p>
+                    Helps attract water and soften rough skin.
+                    Its effect depends on the concentration used in a product.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Petrolatum</h3>
+                <p>
+                    An occlusive ingredient that forms a protective layer
+                    to reduce water loss from the skin.
+                </p>
+            </div>
+
+        </div>
+
+
+        <h3 class="subheading">Skin Barrier & Soothing Ingredients</h3>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Ceramides</h3>
+                <p>
+                    Lipids naturally found in the skin barrier.
+                    Skincare products containing ceramides can help
+                    support barrier function and reduce moisture loss.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Niacinamide (Vitamin B3)</h3>
+                <p>
+                    Can support the skin barrier and help improve
+                    uneven skin tone and the appearance of excess oil.
+                    Skin tolerance varies.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Colloidal Oatmeal</h3>
+                <p>
+                    A soothing ingredient that can help relieve dryness
+                    and support the skin barrier.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Allantoin</h3>
+                <p>
+                    A skin-conditioning ingredient commonly used to
+                    soften and soothe the skin.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Centella Asiatica</h3>
+                <p>
+                    A plant-derived ingredient used in skincare products
+                    designed to soothe and condition the skin.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Beta-Glucan</h3>
+                <p>
+                    A moisturizing ingredient that can help soothe the skin
+                    and support hydration.
+                </p>
+            </div>
+
+        </div>
+
+
+        <h3 class="subheading">Ingredients for Acne & Clogged Pores</h3>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Salicylic Acid (BHA)</h3>
+                <p>
+                    An exfoliating ingredient that can enter oil-filled pores
+                    and help reduce clogged pores. It may cause dryness
+                    or irritation in some people.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Benzoyl Peroxide</h3>
+                <p>
+                    An acne treatment ingredient that helps reduce
+                    acne-causing bacteria and inflammation.
+                    It can irritate skin and bleach fabrics.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Azelaic Acid</h3>
+                <p>
+                    Can help with acne and uneven pigmentation.
+                    It may cause mild irritation, especially on sensitive skin.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Sulfur</h3>
+                <p>
+                    Used in some acne products to help reduce excess oil
+                    and support the management of certain blemishes.
+                    It can be drying.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Alpha Hydroxy Acids (AHAs)</h3>
+                <p>
+                    Ingredients such as glycolic acid and lactic acid
+                    exfoliate the skin surface and can improve the appearance
+                    of uneven texture. They may increase sun sensitivity.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Retinoids</h3>
+                <p>
+                    Vitamin A-related ingredients used for concerns such
+                    as acne and signs of skin ageing. They can cause
+                    irritation and require appropriate professional guidance.
+                </p>
+            </div>
+
+        </div>
+
+
+        <h3 class="subheading">Ingredients for Uneven Tone & Antioxidant Care</h3>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Vitamin C</h3>
+                <p>
+                    An antioxidant that helps protect against environmental
+                    oxidative stress and may improve the appearance of
+                    uneven pigmentation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Alpha Arbutin</h3>
+                <p>
+                    An ingredient used in products designed to improve
+                    the appearance of uneven pigmentation and dark spots.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Tranexamic Acid</h3>
+                <p>
+                    Used in some skincare products to help improve
+                    the appearance of uneven pigmentation.
+                    Results vary between individuals.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Licorice Root Extract</h3>
+                <p>
+                    A plant-derived ingredient used in some products
+                    for soothing and improving the appearance
+                    of uneven skin tone.
+                </p>
+            </div>
+
+        </div>
+
+
+        <h3 class="subheading">Sun Protection Ingredients</h3>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Zinc Oxide</h3>
+                <p>
+                    A mineral UV filter used in sunscreens to protect
+                    against UVA and UVB radiation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Titanium Dioxide</h3>
+                <p>
+                    A mineral UV filter used in sunscreens.
+                    The level of protection depends on the complete
+                    sunscreen formulation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Broad-Spectrum UV Filters</h3>
+                <p>
+                    Sunscreens use approved UV filters to help protect
+                    against ultraviolet radiation. Choose a broad-spectrum
+                    sunscreen with SPF 30 or higher.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="note">
+            <h3>Important Ingredient Guide</h3>
+            <p>
+                An ingredient is not automatically suitable for everyone.
+                Concentration, formulation, skin condition and frequency
+                of use all matter. Introduce products carefully, avoid
+                adding several strong active ingredients at once, and
+                follow product directions. If you have a skin condition
+                or persistent irritation, seek advice from a qualified
+                dermatologist.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- SECTION 04 -->
+    <section class="section">
+        <h2 class="section-title">04 — Basic Skincare Tips</h2>
+        <p class="section-intro">
+            A good skincare routine does not need to be complicated.
+            Consistency and gentle care are more important than using
+            many products.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Gentle Cleansing</h3>
+                <p>
+                    Use a gentle cleanser that removes dirt, sweat and
+                    excess oil without leaving your skin uncomfortably tight.
+                    Avoid harsh scrubbing.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Moisturizing</h3>
+                <p>
+                    Use a suitable moisturizer to maintain hydration
+                    and support the skin barrier. Oily skin also needs
+                    appropriate moisturization.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Sun Protection</h3>
+                <p>
+                    Use broad-spectrum SPF 30 or higher sunscreen.
+                    Apply it as directed and reapply regularly,
+                    especially during prolonged outdoor exposure.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Patch Testing</h3>
+                <p>
+                    Test new skincare products on a small area according
+                    to the product instructions before using them regularly.
+                    Stop using a product if a concerning reaction develops.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Avoid Over-Exfoliation</h3>
+                <p>
+                    Using too many exfoliating products can irritate
+                    the skin barrier. Avoid combining multiple strong
+                    exfoliants without suitable guidance.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Do Not Pick Pimples</h3>
+                <p>
+                    Picking or squeezing blemishes can increase irritation,
+                    inflammation and the chance of marks or scarring.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Remove Makeup Gently</h3>
+                <p>
+                    Remove makeup before sleeping using a suitable
+                    makeup remover or cleanser. Avoid rubbing the skin harshly.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Keep Your Routine Simple</h3>
+                <p>
+                    Start with basic cleansing, moisturizing and sun protection.
+                    Add other products only when needed and introduce them
+                    one at a time.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Check Product Expiry</h3>
+                <p>
+                    Follow expiry dates and product storage instructions.
+                    Avoid using products that have changed in smell,
+                    colour or texture.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Keep Skincare Tools Clean</h3>
+                <p>
+                    Clean makeup brushes and reusable skincare tools regularly.
+                    Avoid sharing personal items that touch the face.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 05 -->
+    <section class="section">
+        <h2 class="section-title">05 — Healthy Lifestyle Habits</h2>
+        <p class="section-intro">
+            Skin health is influenced by more than skincare products.
+            Everyday habits can support overall health and skin well-being.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Get Enough Sleep</h3>
+                <p>
+                    Maintain a regular sleep schedule and aim for enough
+                    sleep for your age. Good sleep supports overall health
+                    and the body's natural recovery processes.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Manage Stress</h3>
+                <p>
+                    Stress can affect overall well-being and may worsen
+                    some skin conditions in certain people.
+                    Try relaxing activities, hobbies or gentle exercise.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Stay Physically Active</h3>
+                <p>
+                    Regular movement supports general health.
+                    Choose activities you enjoy and remember to cleanse
+                    away sweat gently when needed.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Stay Hydrated</h3>
+                <p>
+                    Drink water regularly throughout the day.
+                    Your fluid needs can vary with weather, activity
+                    and individual health needs.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Keep Your Environment Clean</h3>
+                <p>
+                    Keep frequently used personal items clean.
+                    Change pillowcases regularly and avoid letting
+                    dirty hands repeatedly touch your face.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Avoid Smoking and Vaping</h3>
+                <p>
+                    Smoking and vaping can negatively affect overall health.
+                    Avoiding them is beneficial for your long-term well-being.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Protect Your Skin Outdoors</h3>
+                <p>
+                    Use sunscreen, seek shade when possible and wear
+                    protective clothing during prolonged sun exposure.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Be Consistent</h3>
+                <p>
+                    Healthy habits take time. Focus on regular,
+                    realistic routines instead of expecting
+                    immediate changes.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 06 -->
+    <section class="section">
+        <h2 class="section-title">06 — Healthy Food Habits</h2>
+        <p class="section-intro">
+            A balanced diet supports overall health, including the normal
+            functions of the skin. No single food can guarantee clear or
+            perfect skin.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Eat a Variety of Fruits</h3>
+                <p>
+                    Fruits provide vitamins, minerals, fibre and other
+                    nutrients. Include different seasonal fruits as part
+                    of a balanced diet.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Include Vegetables</h3>
+                <p>
+                    Vegetables provide important nutrients and fibre.
+                    Try to include a variety of colourful vegetables
+                    in regular meals.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Choose Protein Sources</h3>
+                <p>
+                    Foods such as fish, eggs, lentils, beans, chicken
+                    and nuts provide protein needed for normal body
+                    functions and tissue maintenance.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Include Healthy Fats</h3>
+                <p>
+                    Foods such as fish, nuts, seeds and suitable plant oils
+                    provide fats that are part of a balanced diet.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Choose Whole Grains</h3>
+                <p>
+                    Whole grains such as oats, brown rice and whole-wheat
+                    foods provide fibre and other nutrients.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Drink Enough Water</h3>
+                <p>
+                    Drink water regularly and increase fluids when
+                    appropriate for heat or physical activity.
+                    Drinking excessive water does not automatically
+                    improve skin.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Notice Your Food Triggers</h3>
+                <p>
+                    Some people notice that certain foods may worsen
+                    their acne, while others do not. Observe your own
+                    patterns without assuming that one food affects everyone.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Limit Excessively Sugary Foods</h3>
+                <p>
+                    A diet high in foods that rapidly raise blood sugar
+                    may be associated with acne in some people.
+                    Balanced eating is more helpful than strict food rules.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Eat Regular, Balanced Meals</h3>
+                <p>
+                    Include a variety of food groups and avoid unnecessary
+                    restrictive diets. Your body needs enough energy
+                    and nutrients to stay healthy.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="note">
+            <h3>A Note About Food & Acne</h3>
+            <p>
+                Research suggests that high-glycemic diets and some dairy
+                products may be associated with acne in certain people,
+                but the evidence is not the same for everyone.
+                Food is only one possible factor. Do not remove entire
+                food groups or follow restrictive diets just to change
+                your skin. Seek advice from a qualified healthcare
+                professional if you have concerns about your diet.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- SECTION 07 -->
+    <section class="section">
+        <h2 class="section-title">07 — Habits to Avoid</h2>
+        <p class="section-intro">
+            Some everyday habits can increase irritation or make
+            existing skin concerns harder to manage.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Harsh Scrubbing</h3>
+                <p>
+                    Scrubbing too hard can irritate the skin.
+                    Cleanse gently using your fingertips.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Using Too Many Products</h3>
+                <p>
+                    Layering many new products at once makes it difficult
+                    to identify irritation and may overwhelm the skin.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Sleeping with Makeup</h3>
+                <p>
+                    Leaving makeup on overnight may contribute to
+                    clogged pores or irritation for some people.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Using Products Not Meant for Skin</h3>
+                <p>
+                    Avoid applying household chemicals or harsh
+                    non-skincare substances to your face.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Ignoring Irritation</h3>
+                <p>
+                    Do not continue using a product that causes
+                    persistent burning, itching or irritation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Skipping Sun Protection</h3>
+                <p>
+                    Repeated unprotected sun exposure can contribute
+                    to sun damage and pigmentation.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FINAL REMINDER -->
+    <div class="note">
+        <h3>A Gentle Reminder</h3>
+        <p>
+            Every skin is different. Healthy skin does not have to look
+            perfect, poreless or identical to someone else's.
+            Introduce new products carefully, keep your routine gentle
+            and give products appropriate time to work.
+            If you experience persistent, severe or painful skin problems,
+            unusual changes, or a reaction that does not settle,
+            consult a qualified dermatologist.
+        </p>
+        <p style="margin-top: 12px;">
+            Skinova provides general skincare education and is not a
+            substitute for professional medical diagnosis or treatment.
+        </p>
+    </div>
+
+    <a href="/dashboard" class="back">← Back to Dashboard</a>
+
+</div>
+
+<footer>
+    skinova. — Healthy skin is a journey, not a race.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skinova | Admin Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #eee3d6;
+            color: #493326;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background: #fffaf5;
+            width: 400px;
+            padding: 45px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #927966;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #cbb8a5;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #795438;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5d3e29;
+        }
+
+        .message {
+            text-align: center;
+            color: #a33;
+            margin-bottom: 15px;
+        }
+
+        .back {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #795438;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1>Skinova Admin</h1>
+
+        <p class="subtitle">Welcome back, Admin!</p>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        <form action="/admin-login" method="POST">
+
+            <label>Email Address</label>
+            <input type="email" name="email" required
+                   placeholder="Enter admin email">
+
+            <label>Password</label>
+            <input type="password" name="password" required
+                   placeholder="Enter admin password">
+
+            <button type="submit">Login to Admin Panel →</button>
+
+        </form>
+
+        <p class="back">
+            <a href="/">← Back to Home</a>
+        </p>
+
+    </div>
+
+</body>
+</html>

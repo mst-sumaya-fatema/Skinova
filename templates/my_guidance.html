@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skinova | My Guidance</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #eee3d6;
+            color: #493326;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #927966;
+        }
+
+        .guidance-card {
+            background: #fffaf5;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 12px #00000010;
+        }
+
+        .guidance-card h2 {
+            margin-bottom: 15px;
+        }
+
+        .detail {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .guidance {
+            background: #f1e5d8;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 18px;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        .status {
+            color: #557447;
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #795438;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .empty {
+            background: #fffaf5;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>My Skincare Guidance</h1>
+
+    <p class="subtitle">
+        Your personalized skincare guidance, all in one place.
+    </p>
+
+    {% if requests %}
+
+        {% for item in requests %}
+
+            <div class="guidance-card">
+
+                <h2>Request #{{ item[0] }}</h2>
+
+                <p class="detail">
+                    <strong>Question:</strong> {{ item[1] }}
+                </p>
+
+                <p class="detail">
+                    <strong>Skin Type:</strong> {{ item[2] or 'Not provided' }}
+                </p>
+
+                <p class="detail">
+                    <strong>Skin Concern:</strong> {{ item[3] or 'Not provided' }}
+                </p>
+
+                <p class="detail">
+                    <strong>Current Routine:</strong> {{ item[4] }}
+                </p>
+
+                <p class="detail status">
+                    Status: {{ item[5] }}
+                </p>
+
+                <div class="guidance">
+
+                    <strong>Admin Guidance:</strong>
+
+                    <p>{{ item[6] }}</p>
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="empty">
+            <h2>No Guidance Available Yet</h2>
+            <p>Your submitted requests and their guidance will appear here.</p>
+        </div>
+
+    {% endif %}
+
+    <a href="/dashboard">← Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

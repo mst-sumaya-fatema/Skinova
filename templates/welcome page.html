@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skinova | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #eee3d6;
+            color: #493326;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 9%;
+            background: #eee3d6;
+        }
+
+        .logo {
+            font-size: 34px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #553a29;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #553a29;
+            margin-left: 35px;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        nav a:hover {
+            color: #a17a5b;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px 110px;
+            background: linear-gradient(
+                135deg,
+                #eee3d6,
+                #e4d0bb,
+                #f2e7db
+            );
+        }
+
+        .small-title {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #96745c;
+            margin-bottom: 28px;
+        }
+
+        h1 {
+            font-size: 65px;
+            line-height: 1.2;
+            font-weight: normal;
+            color: #493326;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #986e4d;
+            font-style: italic;
+        }
+
+        .description {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.9;
+            color: #765c49;
+            max-width: 650px;
+            margin: 0 auto 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #60432f;
+            color: #fff5e9;
+            text-decoration: none;
+            padding: 16px 35px;
+            border-radius: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #3e2b20;
+        }
+
+        .signin-text {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #765c49;
+            margin-top: 23px;
+        }
+
+        .signin-text a {
+            color: #50392b;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .features {
+            padding: 85px 8%;
+            background: #e3d1be;
+            text-align: center;
+        }
+
+        .features .small-title {
+            color: #806047;
+        }
+
+        .features h2 {
+            font-size: 39px;
+            font-weight: normal;
+            color: #493326;
+            margin-bottom: 18px;
+        }
+
+        .feature-description {
+            font-family: Arial, sans-serif;
+            color: #765c49;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 45px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 25px;
+        }
+
+        .card {
+            flex: 1;
+            background: #f1e7dc;
+            padding: 40px 28px;
+            border-radius: 8px;
+            border: 1px solid #d2bda7;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px #bda58d55;
+        }
+
+        .card-number {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #a17b5c;
+            margin-bottom: 25px;
+        }
+
+        .card h3 {
+            font-size: 23px;
+            font-weight: normal;
+            color: #543725;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #765c49;
+        }
+
+        .bottom {
+            background: #60432f;
+            color: #f5e9dc;
+            text-align: center;
+            padding: 75px 20px;
+        }
+
+        .bottom h2 {
+            font-size: 38px;
+            font-weight: normal;
+            margin-bottom: 28px;
+        }
+
+        .bottom p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #e0cbb6;
+            margin-bottom: 28px;
+        }
+
+        .bottom .btn {
+            background: #eee0d0;
+            color: #503321;
+        }
+
+        .bottom .btn:hover {
+            background: #d8c0a7;
+        }
+
+        footer {
+            background: #402a1e;
+            color: #d9c3ae;
+            text-align: center;
+            padding: 22px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        @media (max-width: 750px) {
+
+            nav {
+                padding: 20px 6%;
+            }
+
+            nav a {
+                margin-left: 15px;
+                font-size: 11px;
+            }
+
+            .hero {
+                padding: 75px 20px;
+            }
+
+            h1 {
+                font-size: 43px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .features {
+                padding: 65px 7%;
+            }
+
+            .features h2 {
+                font-size: 30px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .bottom h2 {
+                font-size: 29px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            skinova.
+        </div>
+
+        <div>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+
+        <p class="small-title">
+            A PERSONAL SPACE FOR YOUR SKIN
+        </p>
+
+        <h1>
+            A little care.<br>
+            A little glow.<br>
+            <span>A lot of love.</span>
+        </h1>
+
+        <p class="description">
+            Your skin deserves more softness and glow.
+            Discover skincare that understands your skin
+            and celebrates your uniqueness.
+        </p>
+
+        <a href="/register" class="btn">
+            Begin Your Journey →
+        </a>
+
+        <p class="signin-text">
+            Already have an account?
+            <a href="/login">Sign In</a>
+        </p>
+
+    </section>
+
+    <section class="features" id="about">
+
+        <p class="small-title">
+            YOUR SKIN, YOUR STORY
+        </p>
+
+        <h2>
+            Discover a more personal way to care.
+        </h2>
+
+        <p class="feature-description">
+            A little knowledge, a little guidance,
+            and a more thoughtful skincare journey.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <p class="card-number">01 — DISCOVER</p>
+                <h3>Know Your Skin</h3>
+                <p>
+                    Understand different skin types
+                    and explore common skin concerns.
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="card-number">02 — PERSONALIZE</p>
+                <h3>Personal Guidance</h3>
+                <p>
+                    Discover skincare guidance
+                    designed around your skin's needs.
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="card-number">03 — LEARN</p>
+                <h3>Learn & Explore</h3>
+                <p>
+                    Explore skincare ingredients,
+                    helpful tips and useful information.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="bottom">
+
+        <h2>
+            Your skin deserves a little extra love.
+        </h2>
+
+        <p>
+            Start your personal skincare journey with Skinova.
+        </p>
+
+        <a href="/register" class="btn">
+            Create Your Account →
+        </a>
+
+    </section>
+
+    <footer>
+        © 2026 Skinova. All rights reserved.
+    </footer>
+
+</body>
+</html>

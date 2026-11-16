@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skinova | My Requests</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #e9dfd2;
+            color: #493326;
+        }
+
+        nav {
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #563a29;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #624832;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        .container {
+            padding: 45px 8%;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            font-family: Arial, sans-serif;
+            color: #765c49;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .request-card {
+            background: #f1e7dc;
+            border: 1px solid #d2bda7;
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 22px;
+        }
+
+        .request-card h2 {
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+
+        .request-card p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 8px;
+            color: #765c49;
+        }
+
+        .status {
+            font-weight: bold;
+            color: #79563e;
+        }
+
+        .empty {
+            background: #f1e7dc;
+            padding: 30px;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            color: #60432f;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">skinova.</div>
+        <a href="/dashboard">DASHBOARD</a>
+    </nav>
+
+    <section class="container">
+
+        <h1>My Skin Requests.</h1>
+
+        <p class="intro">
+            Keep track of your skincare questions
+            and check the status of your requests.
+        </p>
+
+        {% if requests %}
+
+            {% for item in requests %}
+
+                <div class="request-card">
+
+                    <h2>Request #{{ item[0] }}</h2>
+
+                    <p><strong>Age:</strong> {{ item[1] }}</p>
+
+                    <p><strong>Skin Type:</strong> {{ item[2] }}</p>
+
+                    <p><strong>Skin Concerns:</strong> {{ item[3] }}</p>
+
+                    <p><strong>Your Question:</strong> {{ item[4] }}</p>
+
+                    <p><strong>Current Routine:</strong> {{ item[5] }}</p>
+
+                    <p>
+                        <strong>Status:</strong>
+                        <span class="status">{{ item[6] }}</span>
+                    </p>
+
+                    <p>
+                        <strong>Submitted At:</strong> {{ item[7] }}
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <div class="empty">
+                You have not submitted any skin requests yet.
+            </div>
+
+        {% endif %}
+
+        <a href="/dashboard" class="back">
+            ← Back to Dashboard
+        </a>
+
+    </section>
+
+</body>
+</html>

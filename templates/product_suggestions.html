@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skinova | Product Suggestions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #e9dfd2;
+            color: #493326;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 8%;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #563a29;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #624832;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .hero {
+            padding: 65px 9%;
+            background: linear-gradient(120deg, #e9dfd2, #dfcbb6);
+        }
+
+        .small-title {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #927052;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.9;
+            color: #765c49;
+            max-width: 650px;
+        }
+
+        .content {
+            padding: 55px 8%;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #80664f;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .card {
+            background: #f1e7dc;
+            border: 1px solid #d2bda7;
+            border-radius: 9px;
+            padding: 30px;
+        }
+
+        .number {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #a17b5c;
+            margin-bottom: 17px;
+        }
+
+        .card h3 {
+            font-size: 23px;
+            font-weight: normal;
+            color: #543725;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #765c49;
+        }
+
+        .card h4 {
+            font-size: 16px;
+            color: #79563e;
+            margin-top: 18px;
+            margin-bottom: 7px;
+        }
+
+        .note {
+            margin-top: 35px;
+            padding: 30px;
+            background: #60432f;
+            color: #f5e9dc;
+            border-radius: 10px;
+        }
+
+        .note h3 {
+            font-size: 23px;
+            font-weight: normal;
+            margin-bottom: 14px;
+        }
+
+        .note p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #e4d1bf;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 35px;
+            color: #79563e;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #493326;
+            color: #dfcbb8;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        footer small {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #c9ad94;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 20px 5%;
+            }
+
+            .hero {
+                padding: 45px 7%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .content {
+                padding: 40px 6%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">skinova.</div>
+        <a href="/dashboard">DASHBOARD</a>
+    </nav>
+
+    <section class="hero">
+
+        <p class="small-title">YOUR SKINCARE GUIDE</p>
+
+        <h1>Product Suggestions.</h1>
+
+        <p>
+            Explore different types of skincare products and
+            ingredients that may help support your skin needs.
+            Choose products carefully and keep your routine simple.
+        </p>
+
+    </section>
+
+    <section class="content">
+
+        <p class="small-title">EXPLORE PRODUCT CATEGORIES</p>
+
+        <h2 class="section-title">Find what your skin may need.</h2>
+
+        <p class="description">
+            These are general product suggestions, not personal
+            medical recommendations. Always consider your skin's
+            condition and product instructions.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <p class="number">01 — DAILY CLEANSING</p>
+
+                <h3>Cleanser Suggestions</h3>
+
+                <p>
+                    A cleanser helps remove dirt, sweat and excess
+                    oil from the skin.
+                </p>
+
+                <h4>What to look for</h4>
+
+                <p>
+                    • Gentle, non-stripping cleanser<br>
+                    • Glycerin<br>
+                    • Mild cleansing ingredients<br>
+                    • Fragrance-free options for sensitive skin
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <p class="number">02 — DAILY MOISTURE</p>
+
+                <h3>Moisturizer Suggestions</h3>
+
+                <p>
+                    Moisturizers help maintain hydration and
+                    support the skin's protective barrier.
+                </p>
+
+                <h4>What to look for</h4>
+
+                <p>
+                    • Glycerin<br>
+                    • Ceramides<br>
+                    • Hyaluronic Acid<br>
+                    • Panthenol<br>
+                    • A suitable lightweight or rich texture
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <p class="number">03 — SUN PROTECTION</p>
+
+                <h3>Sunscreen Suggestions</h3>
+
+                <p>
+                    Sunscreen helps protect the skin from harmful
+                    ultraviolet radiation.
+                </p>
+
+                <h4>What to look for</h4>
+
+                <p>
+                    • Broad-spectrum protection<br>
+                    • SPF 30 or higher<br>
+                    • A texture you can comfortably use<br>
+                    • Water resistance when needed
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <p class="number">04 — ACNE CARE</p>
+
+                <h3>Acne Care Ingredients</h3>
+
+                <p>
+                    Some ingredients are used in products designed
+                    to manage clogged pores and acne.
+                </p>
+
+                <h4>Ingredients to learn about</h4>
+
+                <p>
+                    • Salicylic Acid<br>
+                    • Benzoyl Peroxide<br>
+                    • Azelaic Acid<br>
+                    • Niacinamide
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <p class="number">05 — UNEVEN SKIN TONE</p>
+
+                <h3>Dark Spot Care</h3>
+
+                <p>
+                    Some skincare ingredients may help improve
+                    the appearance of uneven pigmentation.
+                </p>
+
+                <h4>Ingredients to learn about</h4>
+
+                <p>
+                    • Azelaic Acid<br>
+                    • Vitamin C<br>
+                    • Alpha Arbutin<br>
+                    • Tranexamic Acid<br>
+                    • Niacinamide
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <p class="number">06 — GENTLE SKINCARE</p>
+
+                <h3>Sensitive Skin Care</h3>
+
+                <p>
+                    Sensitive skin may benefit from a simple
+                    routine with gentle and suitable products.
+                </p>
+
+                <h4>What to look for</h4>
+
+                <p>
+                    • Fragrance-free products<br>
+                    • Ceramides<br>
+                    • Panthenol<br>
+                    • Glycerin<br>
+                    • Colloidal Oatmeal
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="note">
+
+            <h3>A Few Things to Remember</h3>
+
+            <p>
+                An ingredient does not work the same way for everyone.
+                Product formulation, concentration and skin condition
+                all matter. Introduce new products one at a time and
+                follow the product instructions.
+                <br><br>
+                Avoid using several strong active ingredients together
+                without suitable guidance. Stop using a product if
+                it causes persistent irritation.
+                <br><br>
+                For persistent, severe or painful skin concerns,
+                consult a qualified dermatologist.
+            </p>
+
+        </div>
+
+        <a href="/dashboard" class="back">
+            ← Back to Dashboard
+        </a>
+
+    </section>
+
+    <footer>
+
+        <p>A little care, every day.</p>
+
+        <small>
+            © 2026 Skinova. All rights reserved.
+        </small>
+
+    </footer>
+
+</body>
+</html>

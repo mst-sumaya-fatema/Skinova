@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skinova | Skin Request</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #e9dfd2;
+            color: #493326;
+        }
+
+        nav {
+            padding: 24px 8%;
+            background: #e9dfd2;
+            font-size: 30px;
+            font-weight: bold;
+            color: #563a29;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 40px;
+            background: #f5eee6;
+            border-radius: 12px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        .intro {
+            font-family: Arial, sans-serif;
+            color: #80664f;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        label, .group-title {
+            display: block;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #cbb49d;
+            border-radius: 6px;
+            background: #fffaf5;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 13px;
+            margin-bottom: 20px;
+        }
+
+        .options label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin: 0;
+        }
+
+        input[type="checkbox"] {
+            accent-color: #60432f;
+        }
+
+        .other-input {
+            margin-top: 12px;
+        }
+
+        button {
+            background: #60432f;
+            color: #fff3e6;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #805c40;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 22px;
+            color: #79563e;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            .options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>skinova.</nav>
+
+<div class="container">
+
+    <h1>Let's understand your skin.</h1>
+
+    <p class="intro">
+        Every skin is different. Tell us about your skin,
+        your concerns and your current routine so we can
+        provide guidance that suits your needs.
+    </p>
+
+    <form action="/skin-request" method="POST">
+
+        <label>Age</label>
+        <input type="number" name="age" min="1" max="120"
+               placeholder="Enter your age">
+
+        <p class="group-title">Your Skin Type</p>
+
+        <div class="options">
+            <label><input type="checkbox" name="skin_type" value="Oily"> Oily</label>
+            <label><input type="checkbox" name="skin_type" value="Dry"> Dry</label>
+            <label><input type="checkbox" name="skin_type" value="Combination"> Combination</label>
+            <label><input type="checkbox" name="skin_type" value="Normal"> Normal</label>
+            <label><input type="checkbox" name="skin_type" value="Sensitive"> Sensitive</label>
+            <label><input type="checkbox" name="skin_type" value="Dehydrated"> Dehydrated</label>
+            <label><input type="checkbox" name="skin_type" value="Not sure"> Not sure</label>
+            <label><input type="checkbox" name="skin_type" value="Other"> Other</label>
+        </div>
+
+        <input class="other-input" type="text" name="other_skin_type"
+               placeholder="If Other, please specify">
+
+        <p class="group-title">Your Skin Concerns</p>
+
+        <div class="options">
+            <label><input type="checkbox" name="skin_concern" value="Acne/Pimples"> Acne / Pimples</label>
+            <label><input type="checkbox" name="skin_concern" value="Dark Spots"> Dark Spots</label>
+            <label><input type="checkbox" name="skin_concern" value="Blackheads/Whiteheads"> Blackheads / Whiteheads</label>
+            <label><input type="checkbox" name="skin_concern" value="Uneven Skin Tone"> Uneven Skin Tone</label>
+            <label><input type="checkbox" name="skin_concern" value="Dryness/Dehydration"> Dryness / Dehydration</label>
+            <label><input type="checkbox" name="skin_concern" value="Excess Oiliness"> Excess Oiliness</label>
+            <label><input type="checkbox" name="skin_concern" value="Sensitivity/Irritation"> Sensitivity / Irritation</label>
+            <label><input type="checkbox" name="skin_concern" value="Dullness"> Dullness</label>
+            <label><input type="checkbox" name="skin_concern" value="Other"> Other</label>
+        </div>
+
+        <input class="other-input" type="text" name="other_skin_concern"
+               placeholder="If Other, please specify">
+
+        <label>Your Questions *</label>
+        <textarea name="question" required
+                  placeholder="Tell us about your skin problems and ask your questions..."></textarea>
+
+        <label>Current Skincare Routine *</label>
+        <textarea name="current_routine" required
+                  placeholder="Tell us about the skincare products you currently use and your daily routine..."></textarea>
+
+        <button type="submit">Submit My Request →</button>
+
+    </form>
+
+    <a href="/dashboard" class="back">← Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>
